@@ -49,9 +49,6 @@ func (e *ErrorProps) Error() string {
 //
 // Returns:
 //   - This method returns the error properties
-func Except(typo string, message string) ErrorProps {
-	return ErrorProps{
-		Type:    typo,
-		Message: message,
-	}
+func Except(typo string, message string) error {
+	return &ErrorProps{typo, message}
 }
