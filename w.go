@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"leoarayav/w/internal/wrapper"
+)
 
 // This is the main package of the application
 //
@@ -15,5 +18,8 @@ import "fmt"
 //
 //	country    Country name where to get the weather information.
 func main() {
-	fmt.Println("W - Meterologic information for a given country and more")
+	w := wrapper.Wrapper()
+	if w != nil {
+		fmt.Println(w)
+	}
 }
